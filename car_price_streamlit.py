@@ -22,7 +22,7 @@ st.sidebar.header("Vehicle Features")
 
 def user_input_features():
     year = st.sidebar.slider("Year", 1990, 2025, 2015)
-    make = st.sidebar.selectbox("Make", encoders["make"].classes_)
+    make = st.sidebar.selectbox("Make", list(encoders["make"].classes_))
     model_input = st.sidebar.selectbox("Model", encoders["model"].classes_)
     trim = st.sidebar.selectbox("Trim", encoders["trim"].classes_)
     body = st.sidebar.selectbox("Body Type", encoders["body"].classes_)
